@@ -12,6 +12,7 @@ import React from "react";
 import { MdDashboard } from "@react-icons/all-files/md/MdDashboard";
 import { GrTransaction } from "@react-icons/all-files/gr/GrTransaction";
 import { MdHelpOutline } from "@react-icons/all-files/md/MdHelpOutline";
+import { Link } from "react-router-dom";
 export default function Sidenav() {
   const navLinks = [
     {
@@ -22,20 +23,20 @@ export default function Sidenav() {
     {
       icon: GrTransaction,
       text: "Transactions",
-      link: "/transactions",
+      link: "/transaction",
     },
   ];
   return (
     <Stack
-     bg={"white"}
+      bg={"white"}
       userSelect={"none"}
       boxShadow={{
-        base:"none",
-        lg:"2px"
+        base: "none",
+        lg: "2px",
       }}
       w={{
-        base:"full",
-        lg:"16rem"
+        base: "full",
+        lg: "16rem",
       }}
       minHeight={"100vh"}
       justify={"space-between"}
@@ -46,29 +47,31 @@ export default function Sidenav() {
         </Heading>
         <Box mt={6} mx={"3"}>
           {navLinks.map((nav) => (
-            <HStack
-              key={nav.text}
-              boxShadow="0px 4px 6px rgba(0, 0, 0, 0.1)"
-              borderRadius={"10px"}
-              fontSize={"14px"}
-              mb={"2"}
-              py={"3"}
-              px="4"
-              _hover={{
-                bg: "#F3F3F7",
-              }}
-            >
-              <Icon as={nav.icon} />
-              <Text
-                fontWeight={"medium"}
-                color={"#797E82"}
+            <Link to={nav.link}>
+              <HStack
+                key={nav.text}
+                boxShadow="0px 4px 6px rgba(0, 0, 0, 0.1)"
+                borderRadius={"10px"}
+                fontSize={"14px"}
+                mb={"2"}
+                py={"3"}
+                px="4"
                 _hover={{
-                  color: "#171717",
+                  bg: "#F3F3F7",
                 }}
               >
-                {nav.text}
-              </Text>
-            </HStack>
+                <Icon as={nav.icon} />
+                <Text
+                  fontWeight={"medium"}
+                  color={"#797E82"}
+                  _hover={{
+                    color: "#171717",
+                  }}
+                >
+                  {nav.text}
+                </Text>
+              </HStack>
+            </Link>
           ))}
         </Box>
       </Box>
@@ -82,6 +85,7 @@ export default function Sidenav() {
         borderRadius={"10px"}
         fontSize={"16px"}
       >
+      <Link to="/support">
         <HStack>
           <Icon as={MdHelpOutline} />
           <Text
@@ -92,6 +96,7 @@ export default function Sidenav() {
             Support
           </Text>
         </HStack>
+        </Link>
       </Box>
     </Stack>
   );

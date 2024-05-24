@@ -1,7 +1,8 @@
 import React from 'react'
+import DashboardLayout from '../../Component/DashboardLayout'
 
 export default function Support() {
   return (
-    <div>Support</div>
+    <DashboardLayout>Support</DashboardLayout>
   )
 }
