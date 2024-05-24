@@ -21,7 +21,7 @@ import { FaRegUserCircle } from "@react-icons/all-files/fa/FaRegUserCircle";
 import { IoIosMenu } from "@react-icons/all-files/io/IoIosMenu";
 export default function TopNav({ title, onOpen }) {
   return (
-    <Box boxShadow={"xl"} px={"4px"}>
+    <Box boxShadow={"xl"} px={"4px"} bg={"white"}>
       <HStack
         maxW={"70rem"}
         h={"64px"}
@@ -36,10 +36,11 @@ export default function TopNav({ title, onOpen }) {
               }}/>
         <Heading fontSize={"28px"}>{title}</Heading>
         <Menu>
-          <MenuButton as={Button}>
+          <MenuButton as={Button} bg={"white"}>
             <Icon
               as={FaRegUserCircle}
               fontSize={"xl"}
+              color={"black"}
             />
           </MenuButton>
           <MenuList>

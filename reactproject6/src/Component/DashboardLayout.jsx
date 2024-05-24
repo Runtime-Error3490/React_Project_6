@@ -20,7 +20,7 @@ export default function DashboardLayout({ title, children }) {
       <SideDrawer isOpen={isOpen} onClose={onClose} />
       <Box flexGrow={1}>
         <TopNav title={title} onOpen={onOpen} />
-        <Container maxW={"1000px"} px={"4"} bg={"green"}>
+        <Container mt={"6px"} maxW={"1000px"} px={"4"}>
           {children}
         </Container>
       </Box>

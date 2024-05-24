@@ -27,6 +27,7 @@ export default function Sidenav() {
   ];
   return (
     <Stack
+     bg={"white"}
       userSelect={"none"}
       boxShadow={{
         base:"none",
