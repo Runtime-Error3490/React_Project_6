@@ -37,7 +37,7 @@ export default function TransactionPage() {
     },
   ];
   return (
-    <DashboardLayout>
+    <DashboardLayout title={"Transactions"}>
       <Flex justify={"end"} mt={6} mb="3">
         <Button leftIcon={<Icon as={IoMdDownload} />}>Export CSV</Button>
       </Flex>
